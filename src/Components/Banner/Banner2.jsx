@@ -1,4 +1,3 @@
-import React from "react";
 import BannerPng from "../../assets/banner2.png";
 import { BiPlayCircle } from "react-icons/bi";
 
@@ -15,9 +14,9 @@ const Banner2 = ({ togglePlay }) => {
                 data-aos-delay="300"
                 className="text-4xl font-semibold"
               >
-                GET READY TO ENJ0Y VR{" "}
+                CONTACT{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                  Movies WITH OUR PLATFORM
+                With Us
                 </span>
               </h1>
               <p data-aos="fade-up" data-aos-delay="500">

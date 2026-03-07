@@ -1,31 +1,31 @@
-import React from "react";
-import { FaCameraRetro } from "react-icons/fa";
+import { BiSolidLike } from "react-icons/bi";
 import { GiNotebook } from "react-icons/gi";
 import { SlNote } from "react-icons/sl";
 
 const FeaturesData = [
   {
-    name: "Captivating Videos",
+    name: "Luxury Facilities",
     icon: (
-      <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
+      // <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
+      <BiSolidLike className="text-5xl text-[#C8A97E] group-hover:text-black duration-300"/>
     ),
     link: "#",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     aosDelay: "300",
   },
   {
-    name: "Safe Transactions",
+    name: "Quality Products",
     icon: (
-      <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
+      <GiNotebook className="text-5xl text-[#C8A97E] group-hover:text-black duration-300" />
     ),
     link: "#",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     aosDelay: "500",
   },
   {
-    name: "Experience Reality",
+    name: "Affordable Price",
     icon: (
-      <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
+      <SlNote className="text-5xl text-[#C8A97E] group-hover:text-black duration-500" />
     ),
     link: "#",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
@@ -42,7 +42,7 @@ const Features = () => {
             data-aos="fade-up"
             className="text-3xl font-semibold text-center sm:text-4xl mb-12"
           >
-            Why Choose Us
+            What we provide
           </h1>
 
           {/* card section */}
@@ -52,14 +52,19 @@ const Features = () => {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
-                className="text-center group space-y-3 sm:space-y-6 p-4 sm:py-10 bg-dark hover:bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_40px_#007cfff0] text-white hover:text-black rounded-lg duration-300"
+                className="text-center group space-y-3 sm:space-y-6 p-4 sm:py-10 
+                bg-gray-950
+                hover:bg-gray-300
+                hover:shadow-[0_10px_30px_rgba(229,231,235,0.9)]
+                text-gray-200 hover:text-gray-900
+                rounded-2xl duration-300"
               >
                 <div className="grid place-items-center"> {data.icon}</div>
                 <h1 className="text-2xl">{data.name}</h1>
                 <p>{data.description}</p>
                 <a
                   href={data.link}
-                  className="inline-block text-lg font-semibold py-3 text-primary group-hover:text-black duration-300"
+                  className="inline-block text-lg font-semibold py-3 group-hover:text-black duration-300"
                 >
                   Learn More
                 </a>
