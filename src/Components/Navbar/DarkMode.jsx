@@ -3,7 +3,7 @@ import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 
 const DarkMode = () => {
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
   );
 
   const element = document.documentElement; // access to html element
