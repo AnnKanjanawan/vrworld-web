@@ -40,7 +40,7 @@ const Features = () => {
         <div>
           <h1
             data-aos="fade-up"
-            className="text-3xl font-semibold text-center sm:text-4xl mb-12"
+            className="text-3xl font-bold font-sans text-center sm:text-4xl mb-12"
           >
             What we provide
           </h1>
@@ -60,11 +60,11 @@ const Features = () => {
                 rounded-2xl duration-300"
               >
                 <div className="grid place-items-center"> {data.icon}</div>
-                <h1 className="text-2xl">{data.name}</h1>
+                <h1 className="text-2xl font-bold font-sans">{data.name}</h1>
                 <p>{data.description}</p>
                 <a
                   href={data.link}
-                  className="inline-block text-lg font-semibold py-3 group-hover:text-black duration-300"
+                  className="inline-block text-lg font-bold font-sans py-3 group-hover:text-black duration-300"
                 >
                   Learn More
                 </a>

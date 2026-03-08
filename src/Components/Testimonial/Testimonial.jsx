@@ -48,8 +48,8 @@ const Testimonial = () => {
           whileInView="animate"
           className="text-gray-500 text-sm max-w-[350px] mx-auto"
         >
-          Bring your dream home to life with one-on-one design help & hand
-          picked products
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          magnam harum accusantium
         </motion.p>
       </div>
       {/* tesitomonial cards */}

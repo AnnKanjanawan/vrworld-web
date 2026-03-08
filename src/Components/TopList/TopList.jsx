@@ -1,5 +1,6 @@
-import React from "react";
 import Image1 from "../../assets/MOCK.png";
+import { motion } from "framer-motion";
+import { SlideUp } from "../../animation/animate";
 
 const ProductData = [
   {
@@ -30,7 +31,14 @@ const TopList = () => {
     <div id="products" className="container py-14">
       {/* header section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-semibold">Products</h1>
+        <motion.h1
+              variants={SlideUp(0.2)}
+              initial="initial"
+              whileInView="animate"
+              className="text-3xl font-bold font-sans"
+            >
+              Products
+            </motion.h1>
         {/* <p>Product list</p> */}
       </div>
       {/* card section */}
@@ -47,9 +55,9 @@ const TopList = () => {
             />
             <div className="space-y-2">
               <p className="text-red-500">{item.rating}</p>
-              <p className="text-lg font-semibold ">{item.name}</p>
+              <p className="text-lg font-bold font-sans">{item.name}</p>
               <p>{item.desc}</p>
-              <p className="text-lg font-semibold">{item.price}</p>
+              <p className="text-lg font-bold font-sans">{item.price}</p>
             </div>
           </div>
         ))}
