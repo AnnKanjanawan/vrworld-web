@@ -10,7 +10,7 @@ const PopupPlayer = ({ isPlay, togglePlay }) => {
             <div className="bg-white dark:bg-dark p-5 m-3 rounded-lg shadow-md">
               {/* header section */}
               <div className="flex items-center justify-between pb-3">
-                <h1 className="text-2xl font-semibold">Metaverse</h1>
+                <h1 className="text-2xl font-semibold">Hotel Core</h1>
                 <IoClose
                   onClick={togglePlay}
                   className="text-4xl cursor-pointer hover:scale-110 duration-300"
