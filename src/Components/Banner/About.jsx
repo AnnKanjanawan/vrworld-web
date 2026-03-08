@@ -1,4 +1,3 @@
-import React from "react";
 import MOCK from "../../assets/MOCK.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
@@ -16,7 +15,7 @@ const About = () => {
               whileInView="animate"
               className="text-4xl font-bold font-sans"
             >
-              ABOUT
+              ไม่เอา "ABOUT" ใส่ไรดีค่าา..? 
             </motion.h1>
             <motion.p
               variants={SlideUp(0.4)}
