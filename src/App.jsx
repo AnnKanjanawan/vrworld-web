@@ -21,7 +21,7 @@ const HomePage = ({ togglePlay, isPlay }) => {
       <Hero togglePlay={togglePlay} />
       <AboutSection />
       <ProductSection />
-      <TopList />
+      {/* <TopList /> */}
       <Features />
       <Testimonial />
       <Footer />
