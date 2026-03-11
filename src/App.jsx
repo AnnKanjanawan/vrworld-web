@@ -10,6 +10,7 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AboutSection from "./Components/About/AboutSection";
 
 const App = () => {
   const [isPlay, setIsPlay] = useState(false);
@@ -32,7 +33,8 @@ const App = () => {
     <main className="overflow-x-hidden bg-white dark:bg-black text-black dark:text-white duration-300">
       <Navbar />
       <Hero togglePlay={togglePlay} />
-      <About/>
+      <AboutSection/>
+      {/* <About/> */}
       <TopList/>
       <Features />
       {/* <Quotes /> */}
