@@ -23,16 +23,24 @@ const Hero = ({ togglePlay }) => {
       <div className="relative z-10 flex items-center justify-center h-full text-white">
         <div className="max-w-3xl text-center space-y-6 px-6">
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            LOREM IPSUM DOLOR SIT
-            <span className="block">
-            CONSECTETUR ADIPISCING ELIT
-            </span>
-          </h1>
+        <h1 className="text-lg md:text-4xl font-bold leading-[1.2] tracking-tight">
 
-          <p className="text-lg md:text-xl text-gray-200">
+        <span className="inline-block relative pb-3 hero-shimmer">
+            ยกระดับประสบการณ์การนอนระดับ 5 ดาว
+          </span>
+
+          <span className="block mt-5">
+            ในต้นทุนที่คุ้มค่า
+          </span>
+
+          <span className="block mt-3">
+            สำหรับโรงแรมคุณ
+          </span>
+        </h1>
+
+          {/* <p className="text-lg md:text-xl text-gray-200">
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          </p> */}
 
           <div className="flex justify-center gap-6 pt-4">
           <button
