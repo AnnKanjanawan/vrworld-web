@@ -26,6 +26,38 @@ const productData = {
     ],
   },
 
+  bedding: {
+    title: "เครื่องนอน",
+    subtitle: "เติมเต็มสัมผัสแห่งการพักผ่อนให้แขกของคุณ",
+    price: "เริ่มต้น 890 บาท / เซ็ต",
+    description:
+      "เติมเต็มสัมผัสแห่งการพักผ่อน โอบกอดแขกของคุณด้วยความนุ่มสบายดุจปุยเมฆ เหมาะสำหรับโรงแรม รีสอร์ท และห้องพักทุกระดับ ให้ความรู้สึกสบายและดูสะอาดตา",
+    images: [MOCK, MOCK, MOCK, MOCK],
+    specs: [
+      { label: "วัสดุ", value: "Microfiber / Cotton" },
+      { label: "ชุดประกอบด้วย", value: "ปลอกหมอน ผ้านวม ผ้าปูรอง" },
+      { label: "สี", value: "ขาว / เทาอ่อน" },
+      { label: "จุดเด่น", value: "นุ่ม เบา ซักง่าย แห้งไว" },
+      { label: "เหมาะสำหรับ", value: "ห้องพักโรงแรมและรีสอร์ท" },
+    ],
+  },
+
+  mattress: {
+    title: "ที่นอน",
+    subtitle: "รองรับสรีระ หลับสบาย ยกระดับประสบการณ์การเข้าพัก",
+    price: "เริ่มต้น 4,990 บาท / หลัง",
+    description:
+      "จบปัญหารีวิว 'เตียงแข็ง ปวดหลัง' ด้วยที่นอนสเปกโรงแรมชั้นนำ รองรับสรีระ นอนสบาย และช่วยยกระดับประสบการณ์การเข้าพักของแขกได้อย่างชัดเจน",
+    images: [MOCK, MOCK, MOCK, MOCK],
+    specs: [
+      { label: "ประเภท", value: "Pocket Spring / Hybrid" },
+      { label: "ความหนา", value: "8 - 12 นิ้ว" },
+      { label: "ระดับความนุ่ม", value: "Medium - Firm" },
+      { label: "จุดเด่น", value: "รองรับสรีระ ลดแรงกดทับ" },
+      { label: "เหมาะสำหรับ", value: "โรงแรมระดับมาตรฐานถึงพรีเมียม" },
+    ],
+  },
+
   pillowcase: {
     title: "ปลอกหมอน",
     subtitle: "ปลอกหมอนโรงแรม เนื้อผ้านุ่ม สะอาด เรียบหรู",
@@ -254,7 +286,6 @@ const productData = {
 const ProductDetail = () => {
   const { slug } = useParams();
   const product = productData[slug];
-
   const images = useMemo(() => product?.images || [MOCK], [product]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -296,7 +327,6 @@ const ProductDetail = () => {
         </Link>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,0.95fr)]">
-          {/* Left */}
           <div>
             <div className="rounded-[28px] border border-[#e7e7e7] bg-[#fafafa] p-4 shadow-[0_10px_35px_rgba(0,0,0,0.05)]">
               <div className="relative mx-auto max-w-[520px] overflow-hidden rounded-[24px] bg-[#f2f2f2]">
@@ -311,18 +341,18 @@ const ProductDetail = () => {
 
                   <button
                     onClick={prevImage}
+                    type="button"
                     className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/85 text-[#111111] shadow-md backdrop-blur transition hover:bg-white"
                     aria-label="Previous image"
-                    type="button"
                   >
                     <FiChevronLeft size={18} />
                   </button>
 
                   <button
                     onClick={nextImage}
+                    type="button"
                     className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/85 text-[#111111] shadow-md backdrop-blur transition hover:bg-white"
                     aria-label="Next image"
-                    type="button"
                   >
                     <FiChevronRight size={18} />
                   </button>
@@ -352,7 +382,6 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          {/* Right */}
           <div>
             <div className="lg:sticky lg:top-24">
               <p className="inline-flex rounded-full border border-[#7F8B72]/20 bg-[#7F8B72]/10 px-4 py-2 text-sm font-medium text-[#7F8B72]">
@@ -366,10 +395,6 @@ const ProductDetail = () => {
               <p className="mt-3 text-base text-[#7F8B72] md:text-lg">
                 {product.subtitle}
               </p>
-
-              {/* <p className="mt-5 text-2xl font-bold text-[#111111]">
-                {product.price}
-              </p> */}
 
               <p className="mt-5 text-base leading-8 text-[#555555] md:text-lg">
                 {product.description}
@@ -421,7 +446,6 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
