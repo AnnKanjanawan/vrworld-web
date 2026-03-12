@@ -20,10 +20,10 @@ const AboutSection = () => {
       className="relative overflow-hidden bg-white text-[#1f1f1f] py-20 md:py-28"
     >
       {/* background glow */}
-      <div className="absolute inset-0 pointer-events-none opacity-100">
+      {/* <div className="absolute inset-0 pointer-events-none opacity-100">
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#3F4B38]/10 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#3F4B38]/10 blur-3xl" />
-      </div>
+      </div> */}
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">

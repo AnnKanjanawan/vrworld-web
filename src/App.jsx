@@ -10,6 +10,7 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 import AboutSection from "./Components/About/AboutSection";
 import ProductSection from "./Components/Product/ProductSection";
 import ProductDetail from "./Components/Product/ProductDetail";
+import OurProductSection from "./Components/Product/OurProductSection";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,8 +22,9 @@ const HomePage = ({ togglePlay, isPlay }) => {
       <Hero togglePlay={togglePlay} />
       <AboutSection />
       <ProductSection />
+      <OurProductSection/>
       {/* <TopList /> */}
-      <Features />
+      {/* <Features /> */}
       <Testimonial />
       <Footer />
       <PopupPlayer isPlay={isPlay} togglePlay={togglePlay} />
