@@ -265,8 +265,7 @@ const Navbar = () => {
           className="
             flex h-11 w-11 items-center justify-center
             rounded-full
-            bg-green-500 text-white
-            shadow-[0_0_25px_rgba(34,197,94,0.7)]
+            shadow-[0_0_25px_rgba(31,41,55,0.9)]
             animate-[phoneBlink_0.8s_infinite]
           "
         >
