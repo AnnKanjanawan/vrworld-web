@@ -167,3 +167,30 @@
 body {
   overflow-x: hidden;
 }
+
+/* @keyframes phoneBlinkNumber {
+  0%,100% {
+    color: #464a50;
+    text-shadow: 0 0 5px rgba(121, 128, 140, 0.6);
+  }
+  50% {
+    color: #000000;
+    text-shadow: 0 0 15px rgb(30, 30, 30), 0 0 25px rgba(20, 20, 20, 0.9);
+  }
+} */
+
+@keyframes phoneBlink {
+  0%,100% {
+    box-shadow: 0 0 10px rgba(31,41,55,0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(31,41,55,1), 0 0 40px rgba(31,41,55,0.9);
+  }
+}
+
+@keyframes phoneMove {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+}

@@ -145,30 +145,32 @@ const Navbar = () => {
 
                 {/* Desktop Call Button */}
                 <li className="py-6">
-  <a
-    href={phoneHref}
-    className="
-      flex items-center gap-2
-      px-2 py-1
-      text-sm font-semibold text-[#111111]
-      transition-all duration-300
-      hover:text-[#3F4B38]
-    "
-  >
-    <span
-      className="
-        flex h-9 w-9 items-center justify-center
-        rounded-full
-        text-green-500
-        shadow-[0_0_10px_rgba(34,197,94,0.6)]
-      "
-    >
-      <HiPhone size={18} />
-    </span>
+                  <a
+                    href={phoneHref}
+                    className="
+                      flex items-center gap-2
+                      px-2 py-1
+                      text-sm font-semibold text-black
+                      transition-all duration-300
+                      hover:text-[#7F8B72]
+                    "
+                  >
+                    <span
+                      className="
+                        flex h-9 w-9 items-center justify-center
+                        rounded-full
+                        shadow-[0_0_25px_rgba(31,41,55,0.9)]
+                        animate-[phoneBlink_0.8s_infinite]
+                      "
+                    >
+                      <HiPhone size={18} />
+                    </span>
 
-    <span>{phoneNumber}</span>
-  </a>
-</li>
+                    <span className="inline-block animate-[phoneMove_2s_ease-in-out_infinite]">
+                      {phoneNumber}
+                    </span>
+                  </a>
+                </li>
               </ul>
             </nav>
 
@@ -217,7 +219,7 @@ const Navbar = () => {
             HOTEL DEMO
           </Link>
 
-          <a
+          {/* <a
             href={phoneHref}
             className="flex items-center gap-3 rounded-2xl border border-[#3F4B38]/15 bg-[#f8f8f6] px-4 py-3 text-[#111111] shadow-sm transition hover:bg-[#3F4B38] hover:text-white"
           >
@@ -228,7 +230,7 @@ const Navbar = () => {
               <span className="text-xs opacity-70">โทรหาเรา</span>
               <span className="font-semibold">{phoneNumber}</span>
             </div>
-          </a>
+          </a> */}
 
           {NavLinks.map((item) => (
             <div key={item.id}>
@@ -255,15 +257,20 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Sticky Call Button */}
-      <a
-        href={phoneHref}
-        className="fixed bottom-5 left-1/2 z-[9999] flex -translate-x-1/2 items-center gap-3 rounded-full bg-[#111111] px-5 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:scale-105 xl:hidden"
-      >
-        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-green-500 text-white shadow-[0_0_25px_rgba(34,197,94,0.7)]">
-          <HiPhone size={20} />
-        </span>
-        <span className="text-sm font-semibold">{phoneNumber}</span>
-      </a>
+      <div className="fixed bottom-5 left-1/2 z-[9999] -translate-x-1/2 xl:hidden">
+        <a
+          href={phoneHref}
+          className="flex items-center gap-3 rounded-full bg-[#111111] px-5 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:scale-105"
+        >
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-green-500 text-white shadow-[0_0_25px_rgba(34,197,94,0.7)]">
+            <HiPhone size={20} />
+          </span>
+
+          <span className="text-sm font-semibold">
+            {phoneNumber}
+          </span>
+        </a>
+      </div>
     </>
   );
 };
