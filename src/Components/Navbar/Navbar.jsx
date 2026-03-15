@@ -73,7 +73,7 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex h-[78px] items-center justify-between">
+          <div className="flex h-[64px] items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
               <img
