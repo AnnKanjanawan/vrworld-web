@@ -259,7 +259,7 @@ const Navbar = () => {
       {/* Mobile Sticky Call Button */}
       <a
         href={phoneHref}
-        className="fixed bottom-5 left-1/2 z-[9999] flex -translate-x-1/2 items-center gap-3 rounded-full bg-[#111111] px-5 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:scale-105 xl:hidden"
+        className="fixed bottom-5 right-5 z-[9999] flex -translate-x-1/2 items-center gap-3 rounded-full px-5 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:scale-105 xl:hidden"
       >
         <span
           className="
