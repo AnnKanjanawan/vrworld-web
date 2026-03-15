@@ -1,53 +1,62 @@
 import { Link } from "react-router-dom";
-import MOCK from "../../assets/MOCK.png";
+// import MOCK from "../../assets/MOCK.png";
+
+import OurProductBedSheet from "../../assets/OurProductBedSheet.jpg"
+import OurProductDuvetCover from "../../assets/OurProductDuvetCover.jpg"
+import OurProductTowel from "../../assets/OurProductTowel.jpg"
+import OurProductPillow from "../../assets/OurProductPillow.jpg"
+import OurProductMattressProtect from "../../assets/OurProductMattressProtect.jpg"
+import OurProductTopper from "../../assets/OurProductTopper.jpg"
+import OurProductDuvetInner from "../../assets/OurProductDuvetInner.jpg"
+import OurProductPocketCoil from "../../assets/OurProductPocketCoil.jpg"
 
 const categories = [
   {
     id: 1,
     title: "ผ้าปูที่นอน Cotton 100%",
-    image: MOCK,
+    image: OurProductBedSheet,
     link: "/product/bedding-set",
   },
   {
     id: 2,
     title: "ปลอกผ้านวม",
-    image: MOCK,
+    image: OurProductDuvetCover,
     link: "/product/duvet-cover",
   },
   {
     id: 3,
     title: "ผ้าขนหนู",
-    image: MOCK,
+    image: OurProductTowel,
     link: "/product/bath-towel",
   },
   {
     id: 4,
     title: "หมอน",
-    image: MOCK,
+    image: OurProductPillow,
     link: "/product/pillow",
   },
   {
     id: 5,
     title: "ผ้าปูกันเปื้อน",
-    image: MOCK,
+    image: OurProductMattressProtect,
     link: "/product/mattress-protector",
   },
   {
     id: 6,
     title: "ท็อปเปอร์",
-    image: MOCK,
+    image: OurProductTopper,
     link: "/product/topper",
   },
   {
     id: 7,
     title: "ไส้ผ้านวม",
-    image: MOCK,
+    image: OurProductDuvetInner,
     link: "/product/duvet-insert",
   },
   {
     id: 8,
     title: "ที่นอน Pocket Coil",
-    image: MOCK,
+    image: OurProductPocketCoil,
     link: "/product/pocket-coil",
   },
 ];
@@ -86,11 +95,11 @@ const OurProductSection = () => {
                 </div>
 
                 {/* image */}
-                <div className="relative aspect-square overflow-hidden bg-[#f4f4f1]">
+                <div className="relative aspect-square overflow-hidden ">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain transition duration-700 group-hover:scale-105"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-white/10" />
