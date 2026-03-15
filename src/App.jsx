@@ -10,7 +10,7 @@ import AboutSection from "./Components/About/AboutSection";
 import ProductSection from "./Components/Product/ProductSection";
 import ProductDetail from "./Components/Product/ProductDetail";
 import OurProductSection from "./Components/Product/OurProductSection";
-// import CategoryProductSection from "./Components/Product/CategoryProductSection";
+import CategoryProductSection from "./Components/Product/CategoryProductSection";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -24,7 +24,7 @@ const HomePage = ({ togglePlay, isPlay }) => {
       <AboutSection />
       <ProductSection />
       <OurProductSection/>
-      {/* <CategoryProductSection/> */}
+      <CategoryProductSection/>
       {/* <TopList /> */}
       {/* <Features /> */}
       <Testimonial />

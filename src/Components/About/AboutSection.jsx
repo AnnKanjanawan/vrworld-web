@@ -17,7 +17,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-white text-[#1f1f1f] py-20 md:py-28"
+      className="relative overflow-hidden text-[#1f1f1f] py-20 md:py-28"
     >
       {/* background glow */}
       {/* <div className="absolute inset-0 pointer-events-none opacity-100">
