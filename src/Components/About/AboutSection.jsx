@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import MOCK from "../../assets/MOCK.png";
+import coverAbout from "../../assets/cover-about.mp4";
 
 const AboutSection = () => {
   useEffect(() => {
@@ -35,7 +36,8 @@ const AboutSection = () => {
                 data-aos-delay="100"
                 className="heading-line line-1 whitespace-nowrap block text-[#1f1f1f]"
               >
-                ดูแลครบ <span>จบทุกโปรเจกต์</span>
+                ดูแลครบ 
+                <span>จบทุกโปรเจกต์</span>
               </span>
 
               <span
@@ -63,11 +65,19 @@ const AboutSection = () => {
 
               <div className="image-sweep-card" data-aos="zoom-in" data-aos-delay="250">
                 <div className="image-sweep-inner">
-                  <img
+                  {/* <img
                     src={MOCK}
                     alt="About"
                     className="h-[420px] sm:h-[500px] w-full rounded-[24px] object-cover"
-                  />
+                  /> */}
+                  <video 
+                    src={coverAbout}
+                    alt="About"
+                    className="h-[420px] sm:h-[500px] w-full rounded-[24px] object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline />
                 </div>
               </div>
             </div>
