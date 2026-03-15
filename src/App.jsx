@@ -4,7 +4,6 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import Footer from "./Components/Footer/Footer";
 import PopupPlayer from "./Components/PopupPlayer/PopupPlayer";
-import Testimonial from "./Components/Testimonial/Testimonial";
 
 import AboutSection from "./Components/About/AboutSection";
 import ProductSection from "./Components/Product/ProductSection";
@@ -27,7 +26,7 @@ const HomePage = ({ togglePlay, isPlay }) => {
       <CategoryProductSection/>
       {/* <TopList /> */}
       {/* <Features /> */}
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Footer />
       <PopupPlayer isPlay={isPlay} togglePlay={togglePlay} />
     </main>

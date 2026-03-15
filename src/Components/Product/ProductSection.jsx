@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import MOCK from "../../assets/MOCK.png";
 import { FiArrowRight } from "react-icons/fi";
+
+import MOCK from "../../assets/MOCK.png";
+import ProductBedSet from "../../assets/ProductBedSet.jpg";
+import ProductBedding from "../../assets/ProductBedding.jpg";
+import ProductMattress from "../../assets/ProductMattress.jpg";
 
 const products = [
   {
@@ -10,7 +14,7 @@ const products = [
     description:
       "สร้างความประทับใจตั้งแต่สัมผัสแรก ยกระดับคะแนนรีวิวให้โรงแรมของคุณ",
     metric: "ดูรายละเอียด",
-    image: MOCK,
+    image: ProductBedSet,
     link: "/product/bedding-set",
   },
   {
@@ -19,7 +23,7 @@ const products = [
     description:
       "เติมเต็มสัมผัสแห่งการพักผ่อน โอบกอดแขกของคุณด้วยความนุ่มสบายดุจปุยเมฆ",
     metric: "ดูรายละเอียด",
-    image: MOCK,
+    image: ProductBedding,
     link: "/product/bedding",
   },
   {
@@ -28,7 +32,7 @@ const products = [
     description:
       "จบปัญหารีวิว 'เตียงแข็ง ปวดหลัง' ด้วยที่นอนสเปกโรงแรมชั้นนำ",
     metric: "ดูรายละเอียด",
-    image: MOCK,
+    image: ProductMattress,
     link: "/product/mattress",
   },
 ];
