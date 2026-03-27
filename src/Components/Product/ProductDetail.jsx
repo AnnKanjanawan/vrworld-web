@@ -9,13 +9,13 @@ import {
 
 import MOCK from "../../assets/MOCK.png";
 import Navbar from "../Navbar/Navbar";
-import ผ้าปูที่นอน from "../../assets/ผ้าปูที่นอน.png";
+// import ผ้าปูที่นอน from "../../assets/ผ้าปูที่นอน.png";
 import { label } from "framer-motion/client";
 
 const productData = {
   "bedding-set": {
     title: "ผ้าปูที่นอน",
-    images: [ผ้าปูที่นอน],
+    images: [MOCK],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "ชนิดผ้า", value: "Cotton 100% / CVC" },
