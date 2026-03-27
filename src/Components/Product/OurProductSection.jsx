@@ -49,7 +49,7 @@ const categories = [
   },
   {
     id: 7,
-    title: "ไส้ผ้านวม",
+    title: "ผ้านวม",
     image: OurProductDuvetInner,
     link: "/product/duvet-insert",
   },

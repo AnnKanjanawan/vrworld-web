@@ -31,7 +31,7 @@ const NavLinks = [
       { name: "หมอน", link: "/product/pillow" },
       { name: "ผ้าปูกันเปื้อน", link: "/product/mattress-protector" },
       { name: "ท็อปเปอร์", link: "/product/topper" },
-      { name: "ไส้ผ้านวม", link: "/product/duvet-insert" },
+      { name: "ผ้านวม", link: "/product/duvet-insert" },
     ],
   },
   {
