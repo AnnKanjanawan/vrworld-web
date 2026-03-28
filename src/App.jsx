@@ -17,13 +17,13 @@ import "aos/dist/aos.css";
 
 const HomePage = ({ togglePlay, isPlay }) => {
   return (
-    <main className="overflow-x-hidden bg-white text-black duration-300">
+    <main className="overflow-x-hidden text-black duration-300 bg-[#FBF9F5]">
       <Navbar />
       <Hero togglePlay={togglePlay} />
       <AboutSection />
       <ProductSection />
-      <OurProductSection/>
-      <CategoryProductSection/>
+      <OurProductSection />
+      <CategoryProductSection />
       {/* <TopList /> */}
       {/* <Features /> */}
       {/* <Testimonial /> */}

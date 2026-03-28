@@ -135,7 +135,7 @@ const CategoryProductSection = () => {
   return (
     <section
       id="category-products"
-      className="relative overflow-hidden bg-white py-20 md:py-28"
+      className="relative overflow-hidden bg-[#FBF9F5] py-20 md:py-28"
     >
       {/* soft section glow */}
       <div className="pointer-events-none absolute inset-0">

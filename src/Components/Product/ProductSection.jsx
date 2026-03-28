@@ -55,27 +55,16 @@ const ProductCard = ({ item }) => {
       onMouseLeave={() => setIsHover(false)}
       className="
         group relative overflow-hidden rounded-[30px]
-        border border-[#e8e8e4]
-        bg-gradient-to-b from-white via-[#fcfcfb] to-[#f4f4f1] 
+        bg-[#FAF7F2]  
         shadow-[0_10px_30px_rgba(0,0,0,0.05)]
         transition-all duration-500
         hover:-translate-y-2
-        hover:border-[#7F8B72]/35
+        hover:border-#B5ADA4
         hover:shadow-[0_20px_55px_rgba(127,139,114,0.18)]
       "
     >
       {/* border glow สีเขียวอ่อน */}
-      <div className="pointer-events-none absolute inset-0 rounded-[30px]">
-        <div
-          className={`
-            absolute inset-0 rounded-[30px] transition-opacity duration-500
-            ${isHover ? "opacity-100" : "opacity-0"}
-          `}
-          style={{
-            background: `radial-gradient(420px circle at ${mousePos.x}% ${mousePos.y}%, rgba(127,139,114,0.16), transparent 42%)`,
-          }}
-        />
-      </div>
+      {/*  */}
 
       {/* spotlight ตามเมาส์ */}
       <div
@@ -89,7 +78,7 @@ const ProductCard = ({ item }) => {
       />
 
       {/* inner glow border */}
-      <div
+      {/* <div
         className={`
           pointer-events-none absolute inset-[1px] rounded-[29px] transition-opacity duration-500
           ${isHover ? "opacity-100" : "opacity-0"}
@@ -97,13 +86,13 @@ const ProductCard = ({ item }) => {
         style={{
           boxShadow: `inset 0 0 0 1px rgba(127,139,114,0.22), 0 0 30px rgba(127,139,114,0.10)`,
         }}
-      />
+      /> */}
 
       {/* hover glow background */}
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-        <div className="absolute -left-10 top-10 h-32 w-32 rounded-full bg-[#7F8B72]/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-[#7F8B72]/10 blur-3xl" />
-      </div>
+      {/* <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+        <div className="absolute -left-10 top-10 h-32 w-32 rounded-full bg-[#B5ADA4] blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-[#B5ADA4] blur-3xl" />
+      </div> */}
 
       {/* Image */}
       <div className="relative h-[240px] overflow-hidden bg-[#e9e9e6] sm:h-[260px]">
@@ -154,9 +143,9 @@ const ProductCard = ({ item }) => {
             to={item.link}
             className="
               inline-flex items-center gap-2
-              text-sm font-semibold text-[#7F8B72]
+              text-sm font-semibold text-[#A89880]
               transition-all duration-300
-              hover:gap-3 hover:text-[#667259]
+              hover:gap-3 hover:text-[#9E9589]
             "
           >
             ดูรายละเอียด
@@ -180,7 +169,10 @@ const ProductCard = ({ item }) => {
 
 const ProductSection = () => {
   return (
-    <section id="products" className="relative overflow-hidden py-20 md:py-28">
+    <section
+      id="products"
+      className="relative overflow-hidden py-20 md:py-28 bg-[#FBF9F5]"
+    >
       {/* section background glow */}
       {/* <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-16 top-0 h-72 w-72 rounded-full bg-[#7F8B72]/10 blur-3xl" />
@@ -192,7 +184,7 @@ const ProductSection = () => {
         {/* Header */}
         <div className="mb-16">
           <div className="flex items-center gap-6">
-            <h2 className="text-3xl font-semibold text-[#7F8B72] sm:text-3xl md:text-4xl whitespace-nowrap">
+            <h2 className="text-3xl font-semibold text-[#A89880] sm:text-3xl md:text-4xl whitespace-nowrap">
               สินค้าสำหรับโรงแรม
             </h2>
             <div className="h-px w-full bg-[#d8d8d4]" />

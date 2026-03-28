@@ -63,7 +63,7 @@ const categories = [
 
 const OurProductSection = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-20 md:py-28">
+    <section className="relative overflow-hidden bg-[#FBF9F5] py-20 md:py-28">
       {/* background glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-10 top-0 h-72 w-72 rounded-full bg-[#7F8B72]/8 blur-3xl" />
@@ -74,7 +74,7 @@ const OurProductSection = () => {
         {/* Heading */}
         <div className="mb-14">
           <div className="flex items-center gap-4">
-            <h2 className="shrink-0 text-3xl font-semibold tracking-tight text-[#7F8B72] sm:text-3xl md:text-4xl">
+            <h2 className="shrink-0 text-3xl font-semibold tracking-tight text-[#A89880] sm:text-3xl md:text-4xl">
               สินค้าของเรา
             </h2>
             <div className="h-px w-full bg-[#d8d8d4]" />
@@ -85,7 +85,7 @@ const OurProductSection = () => {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((item) => (
             <Link key={item.id} to={item.link} className="group block">
-              <article className="relative overflow-hidden rounded-[24px] border border-[#ecece8] bg-white shadow-[0_8px_25px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2 hover:border-[#7F8B72]/25 hover:shadow-[0_18px_40px_rgba(127,139,114,0.14)]">
+              <article className="relative overflow-hidden rounded-[24px] bg-white shadow-[0_8px_25px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-2">
                 {/* glow */}
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                   <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7F8B72]/10 blur-3xl" />
@@ -105,7 +105,7 @@ const OurProductSection = () => {
 
               {/* title */}
               <div className="pt-4 text-center">
-                <h3 className="text-lg font-medium text-[#666666] transition duration-300 group-hover:text-[#7F8B72] sm:text-xl">
+                <h3 className="text-lg font-medium text-[#666666] transition duration-300 group-hover:text-[#A89880] sm:text-xl">
                   {item.title}
                 </h3>
               </div>

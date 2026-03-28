@@ -130,7 +130,7 @@ const Navbar = () => {
                                   className="
                                     flex items-center gap-3 rounded-xl px-4 py-2 text-sm text-[#111111]
                                     transition-all duration-300
-                                    hover:bg-[#7F8B72] hover:text-white
+                                    hover:bg-[#B8B0A8] hover:text-[#7D756C] 
                                   "
                                 >
                                   <span className="text-[#3F4B38]">✔</span>
