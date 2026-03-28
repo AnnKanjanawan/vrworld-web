@@ -180,10 +180,7 @@ const ProductCard = ({ item }) => {
 
 const ProductSection = () => {
   return (
-    <section
-      id="products"
-      className="relative overflow-hidden py-20 md:py-28"
-    >
+    <section id="products" className="relative overflow-hidden py-20 md:py-28">
       {/* section background glow */}
       {/* <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-16 top-0 h-72 w-72 rounded-full bg-[#7F8B72]/10 blur-3xl" />
@@ -193,14 +190,14 @@ const ProductSection = () => {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-          <div className="mb-16">
+        <div className="mb-16">
           <div className="flex items-center gap-6">
-            <h2 className="text-3xl font-semibold text-[#7F8B72] sm:text-4xl md:text-5xl whitespace-nowrap">
+            <h2 className="text-3xl font-semibold text-[#7F8B72] sm:text-3xl md:text-4xl whitespace-nowrap">
               สินค้าสำหรับโรงแรม
             </h2>
             <div className="h-px w-full bg-[#d8d8d4]" />
           </div>
-          </div>
+        </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 xl:grid-cols-3">

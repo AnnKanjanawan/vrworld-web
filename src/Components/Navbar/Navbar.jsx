@@ -38,10 +38,12 @@ const NavLinks = [
     id: 4,
     name: "ที่นอนโรงแรม",
     submenu: [
-      { name: "ที่นอน Pocket Coil", link: "/product/pocket-coil" },
-      { name: "ที่นอน Bonnel Coil", link: "/product/bonnel-coil" },
-      { name: "ที่นอนยางพารา", link: "/product/latex-mattress" },
-      { name: "ที่นอนโฟมอัด", link: "/product/foam-mattress" },
+      { name: "ที่นอน Titanium Pocket Coil", link: "/product/pocket-coil" },
+      { name: "ที่นอน Titanium Double Coil", link: "/product/double-coil" },
+      { name: "ที่นอน Latex Cokew", link: "/product/latex-cokew" },
+      // { name: "ที่นอน Bonnel Coil", link: "/product/bonnel-coil" },
+      // { name: "ที่นอนยางพารา", link: "/product/latex-mattress" },
+      // { name: "ที่นอนโฟมอัด", link: "/product/foam-mattress" },
     ],
   },
 ];
@@ -234,7 +236,9 @@ const Navbar = () => {
 
           {NavLinks.map((item) => (
             <div key={item.id}>
-              <p className="text-lg font-semibold text-[#111111]">{item.name}</p>
+              <p className="text-lg font-semibold text-[#111111]">
+                {item.name}
+              </p>
 
               {item.submenu && (
                 <div className="mt-2 space-y-2 pl-4 text-gray-500">

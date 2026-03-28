@@ -9,12 +9,25 @@ import {
 import { label } from "framer-motion/client";
 import Navbar from "../Navbar/Navbar";
 import MOCK from "../../assets/MOCK.png";
-import OurProductBedSheet from "../../assets/OurProductBedSheet.jpg";
+import ProductDetailBedSheet from "../../assets/ProductDetailBedSheet.png";
+import ProductDetailPillowCase from "../../assets/ProductDetailPillowCase.png";
+import ProductDetailDuvetCover from "../../assets/ProductDetailDuvetCover.png";
+import ProductDetailTowel from "../../assets/ProductDetailTowel.png";
+import ProductDetailTowelHair from "../../assets/ProductDetailTowelHair.png";
+import ProductDetailTowelFace from "../../assets/ProductDetailTowelFace.png";
+import ProductDetailTowelFoot from "../../assets/ProductDetailTowelFoot.png";
+import ProductDetailPillow from "../../assets/ProductDetailPillow.png";
+import ProductDetailProtectBedSheet from "../../assets/ProductDetailProtectBedSheet.png";
+import ProductDetailTopper from "../../assets/ProductDetailTopper.png";
+import ProductDetailDuvet from "../../assets/ProductDetailDuvet.png";
+import ProductDetailPocketCoil from "../../assets/ProductDetailPocketCoil.png";
+import ProductDetailDoubleCoil from "../../assets/ProductDetailDoubleCoil.png";
+import ProductDetailLatex from "../../assets/ProductDetailLatex.png";
 
 const productData = {
   "bedding-set": {
     title: "ผ้าปูที่นอน",
-    images: [OurProductBedSheet],
+    images: [ProductDetailBedSheet],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "ชนิดผ้า", value: "Cotton 100% / CVC" },
@@ -56,7 +69,7 @@ const productData = {
 
   pillowcase: {
     title: "ปลอกหมอน",
-    images: [MOCK, MOCK, MOCK],
+    images: [ProductDetailPillowCase],
     specs: [
       { label: "ขนาด", value: "20”x30”+6” / 21”x37”+6”" },
       { label: "ชนิดผ้า", value: "Cotton 100% / CVC" },
@@ -66,7 +79,7 @@ const productData = {
 
   "duvet-cover": {
     title: "ปลอกผ้านวม",
-    images: [MOCK, MOCK, MOCK],
+    images: [ProductDetailDuvetCover],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "ชนิดผ้า", value: "Cotton 100% / CVC" },
@@ -76,7 +89,7 @@ const productData = {
 
   "bath-towel": {
     title: "ผ้าขนหนูเช็ดตัว",
-    images: [MOCK],
+    images: [ProductDetailTowel],
     specs: [
       { label: "ขนาด", value: "27”x54” / 30”x60”" },
       { label: "ชนิดผ้า", value: "Cotton 100%" },
@@ -86,7 +99,7 @@ const productData = {
 
   "hair-towel": {
     title: "ผ้าขนหนูเช็ดผม",
-    images: [MOCK],
+    images: [ProductDetailTowelHair],
     specs: [
       { label: "ขนาด", value: "14”x28” / 15”x30”" },
       { label: "ชนิดผ้า", value: "Cotton 100%" },
@@ -96,7 +109,7 @@ const productData = {
 
   "face-towel": {
     title: "ผ้าขนหนูเช็ดหน้า",
-    images: [MOCK],
+    images: [ProductDetailTowelFace],
     specs: [
       { label: "ขนาด", value: "12”x12” / 12”x20”" },
       { label: "ชนิดผ้า", value: "Cotton 100%" },
@@ -106,7 +119,7 @@ const productData = {
 
   "foot-towel": {
     title: "ผ้าขนหนูเช็ดเท้า",
-    images: [MOCK],
+    images: [ProductDetailTowelFoot],
     specs: [
       { label: "ขนาด", value: "20”x28” / 20”x30”" },
       { label: "ชนิดผ้า", value: "Cotton 100%" },
@@ -116,7 +129,7 @@ const productData = {
 
   pillow: {
     title: "หมอน",
-    images: [MOCK, MOCK, MOCK, MOCK],
+    images: [ProductDetailPillow],
     specs: [
       { label: "ขนาด", value: "19”x29” / 20”x36”" },
       { label: "วัสดุภายใน", value: "Microfiber / Microgel" },
@@ -127,7 +140,7 @@ const productData = {
 
   "mattress-protector": {
     title: "ผ้าปูกันเปื้อน",
-    images: [MOCK],
+    images: [ProductDetailProtectBedSheet],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "วัสดุภายใน", value: "Microfiber" },
@@ -138,7 +151,7 @@ const productData = {
 
   topper: {
     title: "ท็อปเปอร์",
-    images: [MOCK],
+    images: [ProductDetailTopper],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "วัสดุภายใน", value: "Cotton 100% / CVC" },
@@ -149,7 +162,7 @@ const productData = {
 
   "duvet-insert": {
     title: "ผ้านวม",
-    images: [MOCK],
+    images: [ProductDetailDuvet],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "วัสดุภายใน", value: "Microfiber" },
@@ -159,8 +172,8 @@ const productData = {
   },
 
   "pocket-coil": {
-    title: "ที่นอน Pocket Coil",
-    images: [MOCK],
+    title: "ที่นอน Titanium Pocket Coil",
+    images: [ProductDetailPocketCoil],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "วัสดุหลัก", value: "Titanium Pocket Coil" },
@@ -168,35 +181,23 @@ const productData = {
     ],
   },
 
-  "bonnel-coil": {
-    title: "ที่นอน Bonnel Coil",
-    subtitle: "แข็งแรง คุ้มค่า เหมาะกับการใช้งานต่อเนื่อง",
-    price: "เริ่มต้น 4,900 บาท / หลัง",
-    description:
-      "ที่นอน Bonnel Coil เป็นตัวเลือกที่คุ้มค่า แข็งแรง เหมาะกับโรงแรมที่ต้องการที่นอนมาตรฐานใช้งานทนและดูแลรักษาง่าย",
-    images: [MOCK, MOCK, MOCK],
+  "double-coil": {
+    title: "ที่นอน Titanium Double Coil",
+    images: [ProductDetailDoubleCoil],
     specs: [
-      { label: "ประเภท", value: "Bonnel Coil" },
-      { label: "ความหนา", value: "8 - 10 นิ้ว" },
-      { label: "ระดับความนุ่ม", value: "Firm" },
-      { label: "จุดเด่น", value: "ทน คุ้มค่า รองรับดี" },
-      { label: "เหมาะสำหรับ", value: "โรงแรมมาตรฐาน อพาร์ตเมนต์" },
+      { label: "ขนาด", value: "King / Queen / Twin" },
+      { label: "วัสดุหลัก", value: "Titanium Double Coil" },
+      { label: "หมายเหตุ", value: "สามารถผลิตตามสเปคที่ต้องการได้" },
     ],
   },
 
-  "latex-mattress": {
-    title: "ที่นอนยางพารา",
-    subtitle: "สัมผัสแน่นนุ่ม รองรับสรีระดี ระบายอากาศเยี่ยม",
-    price: "เริ่มต้น 8,900 บาท / หลัง",
-    description:
-      "ที่นอนยางพาราให้สัมผัสแน่นนุ่ม รองรับสรีระได้ดี ระบายอากาศเยี่ยม เหมาะกับโรงแรมที่ต้องการยกระดับประสบการณ์การพักผ่อน",
-    images: [MOCK, MOCK, MOCK],
+  "latex-cokew": {
+    title: "ที่นอน Latex Cokew",
+    images: [ProductDetailLatex],
     specs: [
-      { label: "ประเภท", value: "Latex Mattress" },
-      { label: "ความหนา", value: "6 - 10 นิ้ว" },
-      { label: "ระดับความนุ่ม", value: "Medium" },
-      { label: "จุดเด่น", value: "ยืดหยุ่นดี ระบายอากาศดี" },
-      { label: "เหมาะสำหรับ", value: "โรงแรมพรีเมียม รีสอร์ท" },
+      { label: "ขนาด", value: "King / Queen / Twin" },
+      { label: "วัสดุหลัก", value: "Latex Cokew" },
+      { label: "หมายเหตุ", value: "สามารถผลิตตามสเปคที่ต้องการได้" },
     ],
   },
 
@@ -323,7 +324,7 @@ const ProductDetail = () => {
                 Product Detail
               </p>
 
-              <h1 className="mt-4 text-3xl font-semibold leading-tight text-[#111111] sm:text-4xl md:text-5xl">
+              <h1 className="mt-4 text-xl font-semibold leading-tight text-[#111111] sm:text-3xl md:text-4xl">
                 {product.title}
               </h1>
 

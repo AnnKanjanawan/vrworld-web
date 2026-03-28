@@ -146,7 +146,7 @@ const CategoryProductSection = () => {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-14 text-center">
-          <h2 className="text-xl font-semibold tracking-tight text-[#A89880] sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-[#A89880] sm:text-3xl md:text-4xl">
             หมวดหมู่สินค้า
           </h2>
           <div className="mx-auto mt-4 h-[2px] w-full w-full bg-[#d8d8d4]" />
