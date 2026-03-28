@@ -181,10 +181,12 @@ body {
 
 @keyframes phoneBlink {
   0%,100% {
-    box-shadow: 0 0 10px rgba(31,41,55,0.6);
+    box-shadow: 0 0 8px rgba(168,152,128,0.4);
   }
   50% {
-    box-shadow: 0 0 25px rgba(31,41,55,1), 0 0 40px rgba(31,41,55,0.9);
+    box-shadow: 
+      0 0 18px rgba(108, 98, 82, 0.7), 
+      0 0 30px rgba(138, 125, 106, 0.5);
   }
 }
 

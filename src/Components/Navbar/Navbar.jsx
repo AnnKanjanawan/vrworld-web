@@ -154,14 +154,14 @@ const Navbar = () => {
                       px-2 py-1
                       text-sm font-semibold text-black
                       transition-all duration-300
-                      hover:text-[#7F8B72]
+                      hover:text-[#A89880]
                     "
                   >
                     <span
                       className="
                         flex h-9 w-9 items-center justify-center
                         rounded-full
-                        shadow-[0_0_25px_rgba(31,41,55,0.9)]
+                        shadow-[#A89880]
                         animate-[phoneBlink_0.8s_infinite]
                       "
                     >
@@ -263,22 +263,19 @@ const Navbar = () => {
       {/* Mobile Sticky Call Button */}
       <a
         href={phoneHref}
-        className="fixed bottom-5 right-5 z-[9999] flex items-center gap-3 rounded-full px-5 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:scale-105 xl:hidden"
+        className="fixed bottom-5 right-5 z-[9999] flex items-center gap-3 rounded-full px-5 py-3  transition hover:scale-105 xl:hidden"
       >
-        <span
-          className="
-            flex h-11 w-11 items-center justify-center
+        <div
+          className="flex h-11 w-11 items-center justify-center
             rounded-full
-            shadow-[0_0_25px_rgba(31,41,55,0.9)]
             animate-[phoneBlink_0.8s_infinite]
+            
           "
         >
           <HiPhone size={20} />
-        </span>
-
-        <span className="text-black inline-block text-sm font-semibold animate-[phoneMove_2s_ease-in-out_infinite]">
-          {phoneNumber}
-        </span>
+        </div>
+        {/* {/* < className="text-black inline-block text-sm font-semibold animate-[phoneMove_2s_ease-in-out_infinite]">
+          {phoneNumber} */}
       </a>
     </>
   );
