@@ -6,16 +6,15 @@ import {
   FiChevronLeft,
   FiChevronRight,
 } from "react-icons/fi";
-
-import MOCK from "../../assets/MOCK.png";
-import Navbar from "../Navbar/Navbar";
-// import ผ้าปูที่นอน from "../../assets/ผ้าปูที่นอน.png";
 import { label } from "framer-motion/client";
+import Navbar from "../Navbar/Navbar";
+import MOCK from "../../assets/MOCK.png";
+import OurProductBedSheet from "../../assets/OurProductBedSheet.jpg";
 
 const productData = {
   "bedding-set": {
     title: "ผ้าปูที่นอน",
-    images: [MOCK],
+    images: [OurProductBedSheet],
     specs: [
       { label: "ขนาด", value: "King / Queen / Twin" },
       { label: "ชนิดผ้า", value: "Cotton 100% / CVC" },
