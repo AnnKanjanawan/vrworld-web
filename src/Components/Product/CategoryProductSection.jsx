@@ -112,10 +112,9 @@ const CategoryCard = ({ item }) => {
             className="
                 px-5 py-1
                 rounded-full
-                bg-white/85
+                bg-white/75
                 backdrop-blur-md
-                border border-[#dcdcdc]
-                text-[#7F8B72]
+                text-[#A89880]
                 text-sm
                 font-semibold
                 tracking-wide
@@ -147,7 +146,7 @@ const CategoryProductSection = () => {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-14 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-[#7F8B72] sm:text-4xl md:text-5xl">
+          <h2 className="text-xl font-semibold tracking-tight text-[#A89880] sm:text-4xl md:text-5xl">
             หมวดหมู่สินค้า
           </h2>
           <div className="mx-auto mt-4 h-[2px] w-full w-full bg-[#d8d8d4]" />
