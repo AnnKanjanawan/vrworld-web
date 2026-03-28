@@ -130,7 +130,7 @@ const ProductCard = ({ item }) => {
 
       {/* Content */}
       <div className="relative z-[2] bg-gradient-to-b from-white/95 via-[#fbfbfa]/95 to-[#f6f6f3]/95 p-5 sm:p-6">
-        <h3 className="text-xl font-semibold leading-snug text-[#111111] sm:text-2xl">
+        <h3 className="text-xl font-semibold leading-snug text-[#A89880] sm:text-2xl">
           {item.title}
         </h3>
 
@@ -138,7 +138,7 @@ const ProductCard = ({ item }) => {
           {item.description}
         </p>
 
-        <div className="mt-5 border-t border-[#ecece8] pt-4">
+        {/* <div className="mt-5 border-t border-[#ecece8] pt-4">
           <Link
             to={item.link}
             className="
@@ -161,7 +161,7 @@ const ProductCard = ({ item }) => {
               <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </span>
           </Link>
-        </div>
+        </div> */}
       </div>
     </article>
   );
