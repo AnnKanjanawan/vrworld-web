@@ -63,9 +63,6 @@ const ProductCard = ({ item }) => {
         hover:shadow-[0_20px_55px_rgba(127,139,114,0.18)]
       "
     >
-      {/* border glow สีเขียวอ่อน */}
-      {/*  */}
-
       {/* spotlight ตามเมาส์ */}
       <div
         className={`
@@ -76,23 +73,6 @@ const ProductCard = ({ item }) => {
           background: `radial-gradient(280px circle at ${mousePos.x}% ${mousePos.y}%, rgba(255,255,255,0.38), transparent 38%)`,
         }}
       />
-
-      {/* inner glow border */}
-      {/* <div
-        className={`
-          pointer-events-none absolute inset-[1px] rounded-[29px] transition-opacity duration-500
-          ${isHover ? "opacity-100" : "opacity-0"}
-        `}
-        style={{
-          boxShadow: `inset 0 0 0 1px rgba(127,139,114,0.22), 0 0 30px rgba(127,139,114,0.10)`,
-        }}
-      /> */}
-
-      {/* hover glow background */}
-      {/* <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-        <div className="absolute -left-10 top-10 h-32 w-32 rounded-full bg-[#B5ADA4] blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-[#B5ADA4] blur-3xl" />
-      </div> */}
 
       {/* Image */}
       <div className="relative h-[240px] overflow-hidden bg-[#e9e9e6] sm:h-[260px]">
@@ -109,32 +89,15 @@ const ProductCard = ({ item }) => {
         {/* cinematic overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10 opacity-80" />
-
-        {/* light sweep */}
-        <div
-          className="
-            pointer-events-none absolute inset-y-0 -left-1/2 w-1/2
-            bg-gradient-to-r from-transparent via-white/25 to-transparent
-            skew-x-[-20deg] opacity-0 transition duration-1000
-            group-hover:left-[120%] group-hover:opacity-100
-          "
-        />
-
-        {/* top label */}
-        {/* <div className="absolute left-4 top-4 z-[2]">
-          <span className="rounded-full border border-white/30 bg-white/80 px-4 py-2 text-xs font-semibold tracking-[0.18em] text-[#111111] backdrop-blur-md">
-            HOTEL ESSENTIAL
-          </span>
-        </div> */}
       </div>
 
       {/* Content */}
       <div className="relative z-[2] bg-gradient-to-b from-white/95 via-[#fbfbfa]/95 to-[#f6f6f3]/95 p-5 sm:p-6">
-        <h3 className="text-xl font-semibold leading-snug text-[#A89880] sm:text-2xl">
+        <h3 className="text-xl font-semibold leading-snug text-[#A49D93] sm:text-2xl">
           {item.title}
         </h3>
 
-        <p className="mt-3 text-sm leading-7 text-[#5f5f5f] sm:text-base">
+        <p className="mt-3 text-sm font-normal leading-7 text-[#332E2A] sm:text-base">
           {item.description}
         </p>
 
@@ -171,7 +134,7 @@ const ProductSection = () => {
   return (
     <section
       id="products"
-      className="relative overflow-hidden py-20 md:py-28 bg-[#FBF9F5]"
+      className="relative overflow-hidden py-20 md:py-28 bg-[#FBFCF9]"
     >
       {/* section background glow */}
       {/* <div className="pointer-events-none absolute inset-0">
@@ -184,7 +147,7 @@ const ProductSection = () => {
         {/* Header */}
         <div className="mb-16">
           <div className="flex items-center gap-6">
-            <h2 className="text-3xl font-semibold text-[#A89880] sm:text-3xl md:text-4xl whitespace-nowrap">
+            <h2 className="text-3xl font-semibold text-[#C5802D] sm:text-3xl md:text-4xl whitespace-nowrap">
               สินค้าสำหรับโรงแรม
             </h2>
             <div className="h-px w-full bg-[#d8d8d4]" />
