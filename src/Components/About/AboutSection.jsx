@@ -2,7 +2,6 @@ import "./AboutSection.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import MOCK from "../../assets/MOCK.png";
 import coverAbout from "../../assets/cover-about.mp4";
 
 const AboutSection = () => {
@@ -18,32 +17,32 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden text-[#1f1f1f] py-20 md:py-28 bg-[#FBF9F5]"
+      className="relative overflow-hidden py-20 md:py-28 bg-[#EAE6E2]"
     >
-      {/* background glow */}
-      {/* <div className="absolute inset-0 pointer-events-none opacity-100">
-        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#3F4B38]/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#3F4B38]/10 blur-3xl" />
-      </div> */}
-
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="about-heading mt-12 md:mt-20 text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold leading-tight tracking-tight">
+            <h2 className="about-heading mt-12 md:mt-20">
               <span
                 data-aos="fade-up"
                 data-aos-delay="100"
-                className="heading-line line-1 whitespace-nowrap block text-[#1f1f1f]"
+                className="heading-line line-1 whitespace-nowrap block 
+                text-[#A49D93] font-semibold
+                text-3xl sm:text-3xl md:text-4xl lg:text-5xl
+                "
               >
-                ดูแลครบ
-                <span>จบทุกโปรเจกต์</span>
+                ดูแลครบ...จบทุกโปรเจกต์
               </span>
 
               <span
                 data-aos="fade-up"
                 data-aos-delay="250"
-                className="heading-line line-2 block mt-4 text-[#A89880]"
+                className="heading-line line-2 block mt-3
+                text-[#332E2A] font-bold tracking-wide
+                text-5xl sm:text-6xl md:text-6xl lg:text-7xl
+                
+                "
               >
                 จัดเต็มทุกสเปก
               </span>
@@ -51,7 +50,10 @@ const AboutSection = () => {
               <span
                 data-aos="fade-up"
                 data-aos-delay="400"
-                className="heading-line line-3 block mt-4 text-[#A89880]"
+                className="heading-line line-3 block mt-3
+                text-[#A49D93] font-medium tracking-wide
+                text-2xl sm:text-2xl md:text-3xl lg:text-4xl
+                "
               >
                 เสกห้องพักให้สมบูรณ์
               </span>
@@ -61,19 +63,13 @@ const AboutSection = () => {
           {/* Right Content */}
           <div className="relative">
             <div className="relative mx-auto max-w-md lg:max-w-xl">
-              <div className="absolute -inset-3 rounded-[32px] bg-[#3F4B38]/10 blur-2xl" />
-
+              <div className="absolute -inset-3 rounded-[32px] bg-[#3F4B38]/10 blur-2xl" />{" "}
               <div
                 className="image-sweep-card"
                 data-aos="zoom-in"
                 data-aos-delay="250"
               >
                 <div className="image-sweep-inner">
-                  {/* <img
-                    src={MOCK}
-                    alt="About"
-                    className="h-[420px] sm:h-[500px] w-full rounded-[24px] object-cover"
-                  /> */}
                   <video
                     src={coverAbout}
                     alt="About"
