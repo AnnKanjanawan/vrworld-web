@@ -67,13 +67,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
-          scrolled
-            ? "bg-white/85 backdrop-blur-xl shadow-md"
-            : "bg-white/50 backdrop-blur-md"
-        }`}
-      >
+      <header className="fixed top-0 left-0 w-full z-[9999] bg-[#E3DCD4] shadow-md transition-all duration-300">
         <div className="container mx-auto px-4">
           <div className="flex h-[64px] items-center justify-between">
             {/* Logo */}
@@ -98,10 +92,10 @@ const Navbar = () => {
                     onMouseEnter={() => setActiveMenu(item.id)}
                     onMouseLeave={() => setActiveMenu(null)}
                   >
-                    <button className="relative font-semibold text-[#111111] transition hover:text-[#3F4B38]">
+                    <button className="relative font-semibold text-[#332E2A] transition hover:text-[#7A746C]">
                       {item.name}
                       <span
-                        className={`absolute left-0 -bottom-2 h-[2px] bg-[#3F4B38] transition-all duration-300 ${
+                        className={`absolute left-0 -bottom-2 h-[2px] bg-[#7A746C] transition-all duration-300 ${
                           activeMenu === item.id ? "w-full" : "w-0"
                         }`}
                       />
@@ -128,12 +122,12 @@ const Navbar = () => {
                                 <Link
                                   to={sub.link}
                                   className="
-                                    flex items-center gap-3 rounded-xl px-4 py-2 text-sm text-[#111111]
+                                    flex items-center gap-3 rounded-xl px-4 py-2 text-sm text-[#332E2A]
                                     transition-all duration-300
-                                    hover:bg-[#B8B0A8] hover:text-[#7D756C] 
+                                    hover:bg-[#E3DCD4] hover:text-[#332E2A] 
                                   "
                                 >
-                                  <span className="text-[#3F4B38]">✔</span>
+                                  <span className="text-[#332E2A]">✔</span>
                                   {sub.name}
                                 </Link>
                               </li>
@@ -150,27 +144,15 @@ const Navbar = () => {
                   <a
                     href={phoneHref}
                     className="
-                      flex items-center gap-2
-                      px-2 py-1
-                      text-sm font-semibold text-black
+                      inline-block
+                      px-4 py-2
+                      text-sm font-semibold text-[#EAE6E2]
+                      bg-[#332E2A]
                       transition-all duration-300
-                      hover:text-[#A89880]
-                    "
-                  >
-                    <span
-                      className="
-                        flex h-9 w-9 items-center justify-center
-                        rounded-full
-                        shadow-[#A89880]
-                        animate-[phoneBlink_0.8s_infinite]
+                      hover:text-[#A49D93]
                       "
-                    >
-                      <HiPhone size={18} />
-                    </span>
-
-                    <span className="inline-block animate-[phoneMove_2s_ease-in-out_infinite]">
-                      {phoneNumber}
-                    </span>
+                  >
+                    Call {phoneNumber}
                   </a>
                 </li>
               </ul>
