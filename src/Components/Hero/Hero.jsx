@@ -1,11 +1,8 @@
 import video from "../../assets/cover.mp4";
-import { BiPlayCircle } from "react-icons/bi";
-
 
 const Hero = ({ togglePlay }) => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
-
       {/* VIDEO BACKGROUND */}
       <video
         src={video}
@@ -20,49 +17,30 @@ const Hero = ({ togglePlay }) => {
       <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
       {/* CONTENT */}
-      <div className="relative z-10 flex items-center justify-center h-full text-white">
-        <div className="max-w-3xl text-center space-y-6 px-6">
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <div className="max-w-3xl  space-y-6 px-6">
+          <h1 className="leading-normal tracking-wide text-[#EAE6E2]">
+            <span className="block">
+              <span className="block text-4xl md:text-4xl font-medium">
+                ยกระดับ
+              </span>
+            </span>
+            <span className="block text-4xl md:text-4xl font-medium">
+              ประสบการณ์การนอน
+            </span>
 
-        <h1 className="text-lg md:text-4xl font-bold leading-[1.2] tracking-tight">
+            <span className="block mt-3 text-5xl md:text-6xl font-bold">
+              ระดับ 5 ดาว
+            </span>
+            <div className="border-t-2 border-[#EAE6E2] my-1"></div>
 
-        <span className="inline-block relative pb-3 hero-shimmer">
-            ยกระดับประสบการณ์การนอนระดับ 5 ดาว
-          </span>
-
-          <span className="block mt-5">
-            ในต้นทุนที่คุ้มค่า
-          </span>
-
-          <span className="block mt-3">
-            สำหรับโรงแรมคุณ
-          </span>
-        </h1>
-
-          {/* <p className="text-lg md:text-xl text-gray-200">
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p> */}
-
-          <div className="flex justify-center gap-6 pt-4">
-          <button
-            onClick={() => {
-              document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-            }}
-            className="bg-transparent border border-white px-6 py-3 rounded-lg font-semibold text-white hover:bg-white hover:text-black duration-300"
-          >
-          Get Started
-          </button>
-    
-            <button
-              onClick={() => {
-                document.getElementById("products").scrollIntoView({ behavior: "smooth" });
-              }}
-              className="flex items-center gap-2 text-lg hover:text-[#C8A97E]"
-            >
-              <BiPlayCircle className="text-3xl" />
-              See Demo
-            </button>
-          </div>
-
+            <span className="block mt-4 text-3xl md:text-3xl font-normal tracking-wider">
+              ในต้นทุนที่คุ้มค่า
+            </span>
+            <span className="block mt-1 text-3xl md:text-3xl font-normal tracking-wider">
+              สำหรับโรงแรมคุณ
+            </span>
+          </h1>
         </div>
       </div>
     </div>
