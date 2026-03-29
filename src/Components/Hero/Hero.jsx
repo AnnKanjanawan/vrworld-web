@@ -21,11 +21,11 @@ const Hero = ({ togglePlay }) => {
         <div className="max-w-3xl  space-y-6 px-6">
           <h1 className="leading-normal tracking-wide text-[#EAE6E2]">
             <span className="block">
-              <span className="block text-4xl md:text-4xl font-medium">
+              <span className="block text-4xl md:text-5xl font-medium">
                 ยกระดับ
               </span>
             </span>
-            <span className="block text-4xl md:text-4xl font-medium">
+            <span className="block text-4xl md:text-5xl font-medium">
               ประสบการณ์การนอน
             </span>
 
@@ -34,10 +34,10 @@ const Hero = ({ togglePlay }) => {
             </span>
             <div className="border-t-2 border-[#EAE6E2] my-1"></div>
 
-            <span className="block mt-4 text-3xl md:text-3xl font-normal tracking-wider">
+            <span className="block mt-4 text-3xl md:text-4xl font-normal tracking-wider">
               ในต้นทุนที่คุ้มค่า
             </span>
-            <span className="block mt-1 text-3xl md:text-3xl font-normal tracking-wider">
+            <span className="block mt-1 text-3xl md:text-4xl font-normal tracking-wider">
               สำหรับโรงแรมคุณ
             </span>
           </h1>
