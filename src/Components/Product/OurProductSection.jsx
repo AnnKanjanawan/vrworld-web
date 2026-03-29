@@ -63,7 +63,7 @@ const categories = [
 
 const OurProductSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#FBF9F5] py-20 md:py-28">
+    <section className="relative overflow-hidden bg-[#EAE6E2] py-20 md:py-28">
       {/* background glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-10 top-0 h-72 w-72 rounded-full bg-[#7F8B72]/8 blur-3xl" />
@@ -74,7 +74,7 @@ const OurProductSection = () => {
         {/* Heading */}
         <div className="mb-14">
           <div className="flex items-center gap-4">
-            <h2 className="shrink-0 text-3xl font-semibold tracking-tight text-[#A89880] sm:text-3xl md:text-4xl">
+            <h2 className="shrink-0 text-3xl font-semibold tracking-tight text-[#C5802D] sm:text-3xl md:text-4xl">
               สินค้าของเรา
             </h2>
             <div className="h-px w-full bg-[#d8d8d4]" />
@@ -105,7 +105,7 @@ const OurProductSection = () => {
 
               {/* title */}
               <div className="pt-4 text-center">
-                <h3 className="text-lg font-medium text-[#666666] transition duration-300 group-hover:text-[#A89880] sm:text-xl">
+                <h3 className="text-lg font-medium text-[#332E2A] transition duration-300 group-hover:text-[#A89880] sm:text-xl">
                   {item.title}
                 </h3>
               </div>
