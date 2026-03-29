@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/logo1.png";
+import Logo from "../../assets/LogoRestina.png";
 import { HiMenuAlt3, HiX, HiPhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -75,11 +75,8 @@ const Navbar = () => {
               <img
                 src={Logo}
                 alt="Logo"
-                className="h-11 w-auto cursor-pointer transition hover:scale-105 md:h-12"
+                className="h-14 md:h-16 w-auto cursor-pointer transition hover:scale-110"
               />
-              <p className="text-base font-bold text-[#111111] md:text-lg">
-                HOTEL DEMO
-              </p>
             </Link>
 
             {/* Desktop Menu */}
