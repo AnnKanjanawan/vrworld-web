@@ -92,7 +92,7 @@ const Navbar = () => {
                     onMouseEnter={() => setActiveMenu(item.id)}
                     onMouseLeave={() => setActiveMenu(null)}
                   >
-                    <button className="relative font-semibold text-[#332E2A] transition hover:text-[#7A746C]">
+                    <button className="relative tracking-wider font-medium text-[#332E2A] transition hover:text-[#7A746C]">
                       {item.name}
                       <span
                         className={`absolute left-0 -bottom-2 h-[2px] bg-[#7A746C] transition-all duration-300 ${
