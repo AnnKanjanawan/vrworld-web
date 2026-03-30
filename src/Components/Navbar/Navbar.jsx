@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Logo from "../../assets/LogoRestina.png";
 import { HiMenuAlt3, HiX, HiPhone } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -41,41 +41,36 @@ const NavLinks = [
       { name: "ที่นอน Titanium Pocket Coil", link: "/product/pocket-coil" },
       { name: "ที่นอน Titanium Double Coil", link: "/product/double-coil" },
       { name: "ที่นอน Latex Cokew", link: "/product/latex-cokew" },
-      // { name: "ที่นอน Bonnel Coil", link: "/product/bonnel-coil" },
-      // { name: "ที่นอนยางพารา", link: "/product/latex-mattress" },
-      // { name: "ที่นอนโฟมอัด", link: "/product/foam-mattress" },
     ],
   },
 ];
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = React.useState(false);
-  const [activeMenu, setActiveMenu] = React.useState(null);
-  const [scrolled, setScrolled] = React.useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [openMenu, setOpenMenu] = useState(null);
 
   const phoneNumber = "082-624-9996";
   const phoneHref = "tel:0826249996";
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-    };
-
+  useEffect(() => {
+    const handleScroll = () => {};
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[9999] bg-[#E3DCD4] shadow-md transition-all duration-300">
+      {/* HEADER */}
+      <header className="fixed top-0 left-0 w-full z-[9999] bg-[#E3DCD4] shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex h-[64px] items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 shrink-0">
+            <Link to="/">
               <img
                 src={Logo}
                 alt="Logo"
-                className="h-14 md:h-16 w-auto cursor-pointer transition hover:scale-110"
+                className="h-14 md:h-16 transition hover:scale-110"
               />
             </Link>
 
@@ -89,7 +84,7 @@ const Navbar = () => {
                     onMouseEnter={() => setActiveMenu(item.id)}
                     onMouseLeave={() => setActiveMenu(null)}
                   >
-                    <button className="relative tracking-wider font-medium text-[#332E2A] transition hover:text-[#7A746C]">
+                    <button className="relative tracking-wider font-medium text-[#332E2A]transition hover:text-[#7A746C]">
                       {item.name}
                       <span
                         className={`absolute left-0 -bottom-2 h-[2px] bg-[#7A746C] transition-all duration-300 ${
@@ -98,6 +93,7 @@ const Navbar = () => {
                       />
                     </button>
 
+                    {/* Dropdown */}
                     {item.submenu && (
                       <div
                         className="
@@ -159,14 +155,14 @@ const Navbar = () => {
             <div className="flex items-center gap-4 xl:hidden">
               {showMenu ? (
                 <HiX
-                  size={30}
-                  className="cursor-pointer text-[#111111]"
+                  size={25}
+                  className="cursor-pointer text-[#A47868]"
                   onClick={() => setShowMenu(false)}
                 />
               ) : (
                 <HiMenuAlt3
-                  size={30}
-                  className="cursor-pointer text-[#111111]"
+                  size={25}
+                  className="cursor-pointer text-[#A47868]"
                   onClick={() => setShowMenu(true)}
                 />
               )}
@@ -175,65 +171,59 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile Overlay */}
+      {/*Mobile Overlay */}
       {showMenu && (
         <div
-          className="fixed inset-0 z-[9997] bg-black/40 backdrop-blur-sm xl:hidden"
+          className="fixed inset-0 bg-black/40 z-[9997]"
           onClick={() => setShowMenu(false)}
         />
       )}
 
       {/* Mobile Slide Menu */}
       <div
-        className={`
-          fixed top-0 right-0 z-[9998] h-full w-[290px] bg-white shadow-2xl
-          transform transition-transform duration-300 xl:hidden
-          ${showMenu ? "translate-x-0" : "translate-x-full"}
-        `}
+        className={`fixed top-0 right-0 z-[9998] h-full w-[290px] bg-white shadow-2xl transition-transform duration-300 xl:hidden overflow-y-auto${
+          showMenu ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        <div className="flex flex-col gap-6 p-6 pt-20">
-          <Link
-            to="/"
-            className="text-lg font-bold text-[#111111]"
-            onClick={() => setShowMenu(false)}
-          >
-            HOTEL DEMO
-          </Link>
-
-          {/* <a
-            href={phoneHref}
-            className="flex items-center gap-3 rounded-2xl border border-[#3F4B38]/15 bg-[#f8f8f6] px-4 py-3 text-[#111111] shadow-sm transition hover:bg-[#3F4B38] hover:text-white"
-          >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white shadow-[0_0_20px_rgba(34,197,94,0.55)]">
-              <HiPhone size={18} />
-            </span>
-            <div className="flex flex-col">
-              <span className="text-xs opacity-70">โทรหาเรา</span>
-              <span className="font-semibold">{phoneNumber}</span>
-            </div>
-          </a> */}
-
+        <div className="p-6 pt-20 space-y-6">
           {NavLinks.map((item) => (
             <div key={item.id}>
-              <p className="text-lg font-semibold text-[#111111]">
+              {/* Main */}
+              <button
+                onClick={() =>
+                  setOpenMenu(openMenu === item.id ? null : item.id)
+                }
+                className="w-full flex justify-between text-[#A47868] text-[14px] font-semibold tracking-wider"
+              >
                 {item.name}
-              </p>
+                <span
+                  className={`transition ${
+                    openMenu === item.id ? "rotate-45" : ""
+                  }`}
+                >
+                  +
+                </span>
+              </button>
 
-              {item.submenu && (
-                <div className="mt-2 space-y-2 pl-4 text-gray-500">
-                  {item.submenu.map((sub, index) => (
-                    <Link
-                      key={index}
-                      to={sub.link}
-                      className="flex items-center gap-2 transition hover:text-[#3F4B38]"
-                      onClick={() => setShowMenu(false)}
-                    >
-                      <span className="text-[#3F4B38]">✔</span>
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {/* Sub */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openMenu === item.id
+                    ? "max-h-[500px] opacity-100"
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                {item.submenu.map((sub, i) => (
+                  <Link
+                    key={i}
+                    to={sub.link}
+                    onClick={() => setShowMenu(false)}
+                    className="block pl-4 py-2 text-[#332E2A] text-[14px] text-normal tracking-wider"
+                  >
+                    ■ {sub.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           ))}
         </div>
