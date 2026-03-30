@@ -115,7 +115,7 @@ const Navbar = () => {
                       >
                         <div
                           className="
-                            w-60 rounded-2xl border border-white/40
+                            w-60 border border-white/40
                             bg-white/85 p-2 shadow-2xl backdrop-blur-2xl
                           "
                         >
@@ -125,7 +125,7 @@ const Navbar = () => {
                                 <Link
                                   to={sub.link}
                                   className="
-                                    flex items-center gap-3 rounded-xl px-4 py-2 text-sm text-[#332E2A]
+                                    flex items-center gap-3 px-4 py-2 text-sm text-[#332E2A]
                                     transition-all duration-300
                                     hover:bg-[#E3DCD4] hover:text-[#332E2A] 
                                   "
@@ -148,7 +148,7 @@ const Navbar = () => {
                     href={phoneHref}
                     className="
                       inline-block
-                      px-4 py-2
+                      px-5 py-2
                       text-sm font-semibold text-[#EAE6E2]
                       bg-[#332E2A]
                       transition-all duration-300
