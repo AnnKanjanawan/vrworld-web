@@ -1,12 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { useMemo, useState } from "react";
-import {
-  FiPhone,
-  FiMessageCircle,
-  FiChevronLeft,
-  FiChevronRight,
-} from "react-icons/fi";
-import { label } from "framer-motion/client";
 import Navbar from "../Navbar/Navbar";
 import MOCK from "../../assets/MOCK.png";
 import ProductDetailBedSheet from "../../assets/ProductDetailBedSheet.png";
@@ -23,6 +16,23 @@ import ProductDetailDuvet from "../../assets/ProductDetailDuvet.png";
 import ProductDetailPocketCoil from "../../assets/ProductDetailPocketCoil.png";
 import ProductDetailDoubleCoil from "../../assets/ProductDetailDoubleCoil.png";
 import ProductDetailLatex from "../../assets/ProductDetailLatex.png";
+
+const productMenu = [
+  { name: "ผ้าปูที่นอน", slug: "bedding-set" },
+  { name: "ปลอกหมอน", slug: "pillowcase" },
+  { name: "ปลอกผ้านวม", slug: "duvet-cover" },
+  { name: "หมอน", slug: "pillow" },
+  { name: "ท็อปเปอร์", slug: "topper" },
+  { name: "ผ้านวม", slug: "duvet-insert" },
+  { name: "ผ้าปูกันเปื้อน", slug: "mattress-protector" },
+  { name: "ที่นอน Titanium Pocket Coil", slug: "pocket-coil" },
+  { name: "ที่นอน Titanium Double Coil", slug: "double-coil" },
+  { name: "ที่นอน Latex Cokew", slug: "latex-cokew" },
+  { name: "ผ้าขนหนูเช็ดตัว", slug: "bath-towel" },
+  { name: "ผ้าขนหนูเช็ดผม", slug: "hair-towel" },
+  { name: "ผ้าขนหนูเช็ดหน้า", slug: "face-towel" },
+  { name: "ผ้าขนหนูเช็ดเท้า", slug: "foot-towel" },
+];
 
 const productData = {
   "bedding-set": {
@@ -218,167 +228,121 @@ const productData = {
   },
 };
 
+/* ===================== COMPONENT ===================== */
 const ProductDetail = () => {
   const { slug } = useParams();
   const product = productData[slug];
   const images = useMemo(() => product?.images || [MOCK], [product]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex] = useState(0);
 
   if (!product) {
     return (
-      <section className="min-h-screen bg-white px-5 py-16">
-        <div className="mx-auto max-w-6xl">
-          {/* <Link
-            to="/"
-            className="mb-8 inline-block text-sm font-semibold text-[#7F8B72] hover:underline"
-          >
-            ← กลับหน้าแรก
-          </Link> */}
-
-          <h1 className="text-3xl font-semibold text-[#111111]">
-            ไม่พบข้อมูลสินค้า
-          </h1>
-        </div>
+      <section className="min-h-screen flex items-center justify-center">
+        <h1 className="text-2xl">ไม่พบข้อมูลสินค้า</h1>
       </section>
     );
   }
 
-  // const prevImage = () => {
-  //   setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  // };
-
-  // const nextImage = () => {
-  //   setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  // };
-
   return (
-    <section className="min-h-screen bg-white px-5 py-12 sm:px-6 md:px-10 md:py-16">
+    <section className="min-h-screen bg-[#F7F6F4] px-5 py-10 md:px-10">
+      <Navbar />
       <div className="mx-auto max-w-7xl">
-        <Navbar />
-        {/* <Link
-          to="/"
-          className="mb-8 inline-block text-sm font-semibold text-[#7F8B72] transition hover:text-[#65725a] hover:underline"
-        >
-          ← กลับหน้าแรก
-        </Link> */}
-
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,0.95fr)]">
-          <div>
-            <div className="">
-              <div className="relative mx-auto max-w-[520px] overflow-hidden rounded-[24px]">
-                <div className="group relative">
-                  <img
-                    src={images[selectedIndex]}
-                    alt={product.title}
-                    className="h-[280px] w-full object-cover transition duration-500 group-hover:scale-110 sm:h-[360px] lg:h-[420px]"
-                  />
-
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/8 via-transparent to-transparent" />
-
-                  {/* <button
-                    onClick={prevImage}
-                    type="button"
-                    className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/85 text-[#111111] shadow-md backdrop-blur transition hover:bg-white"
-                    aria-label="Previous image"
+        <div className="mt-16 border-b border-[#E5E5E5] bg-[#F7F6F4]">
+          <div className="mx-auto max-w-7xl px-5 md:px-10 py-4">
+            <div className="flex flex-wrap items-center text-sm text-[#332E2A] gap-x-3 gap-y-2">
+              {productMenu.map((item, index) => (
+                <span key={item.slug} className="flex items-center">
+                  <Link
+                    to={`/product/${item.slug}`}
+                    className={`relative transition-all duration-300 ease-out
+                    text-[#6B6B6B]
+                    hover:text-[#A47868]
+                    after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-0 
+                    after:bg-[#A47868] after:transition-all after:duration-300
+                    hover:after:w-full
+                    ${slug === item.slug ? "font-semibold text-[#A47868] after:w-full" : ""}
+                  `}
                   >
-                    <FiChevronLeft size={18} />
-                  </button>
+                    {item.name}
+                  </Link>
 
-                  <button
-                    onClick={nextImage}
-                    type="button"
-                    className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/85 text-[#111111] shadow-md backdrop-blur transition hover:bg-white"
-                    aria-label="Next image"
-                  >
-                    <FiChevronRight size={18} />
-                  </button> */}
-                </div>
-              </div>
+                  {index !== productMenu.length - 1 && (
+                    <span className="mx-2 text-[#C5C5C5]">|</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
 
-              {/* <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
-                {images.map((img, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => setSelectedIndex(index)}
-                    className={`shrink-0 overflow-hidden rounded-2xl border transition ${
-                      selectedIndex === index
-                        ? "border-[#7F8B72] ring-2 ring-[#7F8B72]/20"
-                        : "border-[#e5e5e5] hover:border-[#cfd5c8]"
-                    }`}
-                  >
-                    <img
-                      src={img}
-                      alt={`${product.title} ${index + 1}`}
-                      className="h-20 w-20 object-cover sm:h-24 sm:w-24"
-                    />
-                  </button>
-                ))}
-              </div> */}
+        {/* GRID */}
+        <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          {/* LEFT: IMAGE */}
+          <div className="mt-5 flex justify-center">
+            <div className="w-full max-w-[520px] h-[320px] md:h-[420px] overflow-hidden">
+              <img
+                src={images[selectedIndex]}
+                alt={product.title}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
-          <div>
-            <div className="lg:sticky lg:top-24">
-              <p className="inline-flex rounded-full border border-[#7F8B72]/20 bg-[#7F8B72]/10 px-4 py-2 text-sm font-medium text-[#7F8B72]">
-                Product Detail
-              </p>
+          {/* RIGHT: DETAIL */}
+          <div className="lg:pt-10">
+            {/* TITLE */}
+            <h1 className="text-[22px] md:text-[22px] font-semibold text-[#332E2A] racking-wide">
+              {product.title}
+            </h1>
 
-              <h1 className="mt-4 text-xl font-semibold leading-tight text-[#111111] sm:text-3xl md:text-4xl">
-                {product.title}
-              </h1>
+            {/* LINE */}
+            <div className="mt-3 h-[1.5px] w-full bg-[#C5C5C5]" />
 
-              <p className="mt-3 text-base text-[#7F8B72] md:text-lg">
-                {product.subtitle}
-              </p>
+            {/* SUB */}
+            <p className="mt-3 text-[20px] font-normal text-[#A49D93] ">
+              ข้อมูลสินค้า (Product Specific)
+            </p>
 
-              <p className="mt-5 text-base leading-8 text-[#555555] md:text-lg">
-                {product.description}
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="https://line.me"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#7F8B72] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#6b775f]"
-                >
-                  <FiMessageCircle size={18} />
-                  LINE สอบถาม
-                </a>
-
-                <a
-                  href="tel:0826249996"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#111111] px-6 py-3 text-sm font-semibold text-[#111111] transition hover:bg-[#111111] hover:text-white"
-                >
-                  <FiPhone size={18} />
-                  โทรเลย
-                </a>
-              </div>
-
-              <div className="mt-10 overflow-hidden rounded-[24px] border border-[#e7e7e7] bg-white shadow-[0_6px_25px_rgba(0,0,0,0.04)]">
-                <div className="border-b border-[#ececec] bg-[#f8f8f8] px-5 py-4">
-                  <h2 className="text-lg font-semibold text-[#111111]">
-                    ข้อมูลสินค้า (Product Specific)
-                  </h2>
+            {/* SPEC */}
+            <div className="mt-3 space-y-5">
+              {product.specs.map((spec, index) => (
+                <div key={index}>
+                  <p className="text-[16px] font-semibold text-[#332E2A]">
+                    {spec.label}
+                  </p>
+                  <p className="mt-1 text-[14px] font-normal text-[#332E2A]">
+                    {spec.value}
+                  </p>
                 </div>
+              ))}
+            </div>
 
-                <div className="divide-y divide-[#efefef]">
-                  {product.specs.map((spec, index) => (
-                    <div
-                      key={index}
-                      className="grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-[160px_1fr]"
-                    >
-                      <p className="text-sm font-semibold text-[#111111]">
-                        {spec.label}
-                      </p>
-                      <p className="text-sm leading-7 text-[#555555]">
-                        {spec.value}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="mt-10 flex flex-wrap gap-4">
+              {/* LINE */}
+              <a
+                href="https://line.me"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block px-8 py-4 text-[16px] font-semibold text-[#EAE6E2] 
+                bg-[#332E2A] 
+                transition-all duration-300 ease-out
+                hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]
+                active:translate-y-0 active:shadow-md"
+              >
+                ขอใบเสนอราคา
+              </a>
+
+              {/* PHONE */}
+              <a
+                href="tel:0826249996"
+                className="inline-block px-8 py-4 text-[16px] font-semibold 
+                text-[#A49D93] bg-[#E3DCD4]
+                transition-all duration-300 ease-out
+                hover:-translate-y-1 hover:bg-[#E0DBD6] hover:shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+                active:translate-y-0 active:shadow-md"
+              >
+                สอบถามรายละเอียด
+              </a>
             </div>
           </div>
         </div>
