@@ -197,7 +197,7 @@ const Navbar = () => {
 
       {/* Mobile Slide Menu */}
       <div
-        className={`fixed top-0 right-0 z-[9998] h-full w-[290px] bg-white shadow-2xl transition-transform duration-300 xl:hidden overflow-y-auto ${
+        className={`fixed top-0 right-0 z-[9998] h-full w-[50%] bg-white shadow-2xl transition-transform duration-300 xl:hidden overflow-y-auto ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -239,7 +239,7 @@ const Navbar = () => {
                     }}
                     className="block pl-4 py-2 text-[#332E2A] text-[14px] text-normal tracking-wider"
                   >
-                    ■ {sub.name}
+                    ▪︎ {sub.name}
                   </Link>
                 ))}
               </div>
