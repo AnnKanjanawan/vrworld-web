@@ -244,10 +244,10 @@ const ProductDetail = () => {
   }
 
   return (
-    <section className="min-h-screen bg-[#F7F6F4] px-5 py-10 md:px-10">
+    <section className="min-h-screen bg-[#EAE6E2] px-5 py-10 md:px-10">
       <Navbar />
       <div className="mx-auto max-w-7xl">
-        <div className="mt-16 border-b border-[#E5E5E5] bg-[#F7F6F4]">
+        <div className="mt-16 border-b border-[#E5E5E5]">
           <div className="mx-auto max-w-7xl px-5 md:px-10 py-4">
             <div className="flex flex-wrap items-center text-sm text-[#332E2A] gap-x-3 gap-y-2">
               {productMenu.map((item, index) => (
@@ -276,14 +276,14 @@ const ProductDetail = () => {
         </div>
 
         {/* GRID */}
-        <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-6 grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           {/* LEFT: IMAGE */}
           <div className="mt-5 flex justify-center">
-            <div className="w-full max-w-[520px] h-[320px] md:h-[420px] overflow-hidden">
+            <div className="w-full max-w-[520px] h-[320px] md:h-[420px] overflow-hidden group">
               <img
                 src={images[selectedIndex]}
                 alt={product.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition duration-500 ease-out group-hover:scale-110"
               />
             </div>
           </div>
