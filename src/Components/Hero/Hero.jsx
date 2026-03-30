@@ -17,30 +17,37 @@ const Hero = ({ togglePlay }) => {
       <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
       {/* CONTENT */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="max-w-3xl  space-y-6 px-6">
-          <h1 className="leading-normal tracking-wide text-[#EAE6E2]">
-            <span className="block">
-              <span className="block text-4xl md:text-5xl font-medium">
+      <div className="relative z-10 flex items-center justify-start h-full">
+        <div className="container mx-auto px-5 md:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-[#EAE6E2]">
+              {/* บรรทัดบน */}
+              <span className="block text-[40px] md:text-[56px] font-medium leading-[1.1]">
                 ยกระดับ
               </span>
-            </span>
-            <span className="block text-4xl md:text-5xl font-medium">
-              ประสบการณ์การนอน
-            </span>
 
-            <span className="block mt-3 text-5xl md:text-6xl font-bold">
-              ระดับ 5 ดาว
-            </span>
-            <div className="border-t-2 border-[#EAE6E2] my-1"></div>
+              <span className="block text-[40px] md:text-[56px] font-medium leading-[1.1] -mt-1 md:-mt-2">
+                ประสบการณ์การนอน
+              </span>
 
-            <span className="block mt-4 text-3xl md:text-4xl font-normal tracking-wider">
-              ในต้นทุนที่คุ้มค่า
-            </span>
-            <span className="block mt-1 text-3xl md:text-4xl font-normal tracking-wider">
-              สำหรับโรงแรมคุณ
-            </span>
-          </h1>
+              {/* หัวข้อใหญ่ */}
+              <span className="block text-[72px] md:text-[72px] font-bold leading-[0.9] md:leading-[1.1] mt-2 md:mt-2">
+                ระดับ 5 ดาว
+              </span>
+
+              {/* เส้น */}
+              <div className="mt-3 md:mt-4 border-t-4 md:border-t-4 border-[#EAE6E2] w-[350px] md:w-[420px]"></div>
+
+              {/* ข้อความล่าง */}
+              <span className="block mt-3 md:mt-4 text-[34px] md:text-[42px] font-normal leading-[1.5] md:leading-[1.3]">
+                ในต้นทุนที่คุ้มค่า
+              </span>
+
+              <span className="block text-[34px] md:text-[42px] font-normal leading-[1.3] -mt-1">
+                สำหรับโรงแรมคุณ
+              </span>
+            </h1>
+          </div>
         </div>
       </div>
     </div>
