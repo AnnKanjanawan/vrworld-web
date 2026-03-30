@@ -59,6 +59,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!showMenu) {
+      setOpenMenu(null);
+    }
+  }, [showMenu]);
+
+  useEffect(() => {
+    document.body.style.overflow = showMenu ? "hidden" : "auto";
+  }, [showMenu]);
+
   return (
     <>
       {/* HEADER */}
@@ -157,7 +167,10 @@ const Navbar = () => {
                 <HiX
                   size={25}
                   className="cursor-pointer text-[#A47868]"
-                  onClick={() => setShowMenu(false)}
+                  onClick={() => {
+                    setShowMenu(false);
+                    setOpenMenu(null);
+                  }}
                 />
               ) : (
                 <HiMenuAlt3
@@ -175,13 +188,16 @@ const Navbar = () => {
       {showMenu && (
         <div
           className="fixed inset-0 bg-black/40 z-[9997]"
-          onClick={() => setShowMenu(false)}
+          onClick={() => {
+            setShowMenu(false);
+            setOpenMenu(null);
+          }}
         />
       )}
 
       {/* Mobile Slide Menu */}
       <div
-        className={`fixed top-0 right-0 z-[9998] h-full w-[290px] bg-white shadow-2xl transition-transform duration-300 xl:hidden overflow-y-auto${
+        className={`fixed top-0 right-0 z-[9998] h-full w-[290px] bg-white shadow-2xl transition-transform duration-300 xl:hidden overflow-y-auto ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -205,7 +221,7 @@ const Navbar = () => {
                 </span>
               </button>
 
-              {/* Sub */}
+              {/* Sub Menu */}
               <div
                 className={`overflow-hidden transition-all duration-300 ${
                   openMenu === item.id
@@ -217,7 +233,10 @@ const Navbar = () => {
                   <Link
                     key={i}
                     to={sub.link}
-                    onClick={() => setShowMenu(false)}
+                    onClick={() => {
+                      setShowMenu(false);
+                      setOpenMenu(null);
+                    }}
                     className="block pl-4 py-2 text-[#332E2A] text-[14px] text-normal tracking-wider"
                   >
                     ■ {sub.name}
