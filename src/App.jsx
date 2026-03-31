@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import Footer from "./Components/Footer/Footer";
-import PopupPlayer from "./Components/PopupPlayer/PopupPlayer";
 
 import AboutSection from "./Components/About/AboutSection";
 import ProductSection from "./Components/Product/ProductSection";
@@ -14,7 +13,6 @@ import CategoryProductSection from "./Components/Product/CategoryProductSection"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const HomePage = ({ togglePlay, isPlay }) => {
   return (
     <main className="overflow-x-hidden text-black duration-300 bg-[#FBF9F5]">
@@ -24,11 +22,7 @@ const HomePage = ({ togglePlay, isPlay }) => {
       <ProductSection />
       <OurProductSection />
       <CategoryProductSection />
-      {/* <TopList /> */}
-      {/* <Features /> */}
-      {/* <Testimonial /> */}
       <Footer />
-      <PopupPlayer isPlay={isPlay} togglePlay={togglePlay} />
     </main>
   );
 };
